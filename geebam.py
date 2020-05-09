@@ -119,7 +119,6 @@ def main(args=None):
         '--tolerate-assets-already-exist',
         action='store_true',
         help='Return exit 0 when assets already exist')
-    optional_named.add_argument('-h', '--headless', help='Run the browser in headless mode (i.e. no user interface).', type=bool, default=True)
 
     parser_upload.set_defaults(func=upload_from_parser)
 
@@ -143,7 +142,7 @@ def main(args=None):
     else:
         ee.Initialize()
 
-    if args.private_key is not None:
+    if args.private_key != None:
         os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = args.private_key
 
     if 'func' in args:
