@@ -66,8 +66,7 @@ def upload_from_parser(args):
            bucket_name=args.bucket,
            band_names=args.bands,
            signal_if_error=args.upload_catch_error,
-           tolerate_assets_already_exist=args.tolerate_assets_already_exist,
-           headless=args.headless)
+           tolerate_assets_already_exist=args.tolerate_assets_already_exist)
     
 
 def _comma_separated_strings(string):
