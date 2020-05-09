@@ -6,5 +6,5 @@ requests_toolbelt
 pytest
 future==0.17.1
 google-cloud-storage
-chromedriver-binary
+chromedriver-binary==78.0.3904.105.0
 selenium
