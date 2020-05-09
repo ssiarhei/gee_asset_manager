@@ -87,8 +87,8 @@ def _comma_separated_strings(string):
 def main(args=None):
     setup_logging()
     parser = argparse.ArgumentParser(description='Google Earth Engine Batch Asset Manager')
-    parser.add_argument('--service-account', help='Google Earth Engine service account.', required=False)
-    parser.add_argument('--private-key', help='Google Earth Engine private key file.', required=False)
+#     parser.add_argument('--service-account', help='Google Earth Engine service account.', required=False)
+#     parser.add_argument('--private-key', help='Google Earth Engine private key file.', required=False)
 
     subparsers = parser.add_subparsers()
     parser_delete = subparsers.add_parser('delete', help='Deletes collection and all items inside. Supports Unix-like wildcards.')
@@ -101,6 +101,8 @@ def main(args=None):
     required_named.add_argument('--dest', help='Destination. Full path for upload to Google Earth Engine, e.g. users/pinkiepie/myponycollection', required=True)
     optional_named = parser_upload.add_argument_group('Optional named arguments')
     optional_named.add_argument('-m', '--metadata', help='Path to CSV with metadata.')
+    optional_named.add_argument('--service-account', help='Google Earth Engine service account.', required=False)
+    optional_named.add_argument('--private-key', help='Google Earth Engine private key file.', required=False)
     optional_named.add_argument('--large', action='store_true', help='(Advanced) Use multipart upload. Might help if upload of large '
                                                                      'files is failing on some systems. Might cause other issues.')
     optional_named.add_argument('--nodata', type=int, help='The value to burn into the raster as NoData (missing data)')
