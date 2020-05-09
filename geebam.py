@@ -87,8 +87,8 @@ def _comma_separated_strings(string):
 def main(args=None):
     setup_logging()
     parser = argparse.ArgumentParser(description='Google Earth Engine Batch Asset Manager')
-    parser.add_argument('-s', '--service-account', help='Google Earth Engine service account.', required=False)
-    parser.add_argument('-k', '--private-key', help='Google Earth Engine private key file.', required=False)
+    parser.add_argument('--service-account', help='Google Earth Engine service account.', required=False)
+    parser.add_argument('--private-key', help='Google Earth Engine private key file.', required=False)
 
     subparsers = parser.add_subparsers()
     parser_delete = subparsers.add_parser('delete', help='Deletes collection and all items inside. Supports Unix-like wildcards.')
