@@ -1,10 +1,10 @@
-earthengine_api==0.1.221
+earthengine_api==0.1.195
 requests==2.18.4
 retrying
 beautifulsoup4
 requests_toolbelt
 pytest
 future==0.17.1
-google-cloud-storage
+google-cloud-storage==1.28.1
 chromedriver-binary==78.0.3904.105.0
 selenium
